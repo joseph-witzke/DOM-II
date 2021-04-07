@@ -4,13 +4,19 @@ window.addEventListener('load', function(event){
 });
 
 // Navbar
-const navLinks = document.querySelectorAll('.nav .nav-link');
+const navLinks = document.querySelectorAll('.nav-link');
 const navHeader = document.querySelector('.logo-heading');
 
 navHeader.addEventListener('mouseover', function(event){
     navHeader.style.color = 'fuchsia';
 });
 
+Array.from(navLinks).forEach(function (item) {
+    item.addEventListener("mouseover", function (event){
+        item.style.color = 'pink';
+
+    });
+  });
 
 //h2 subtitles
 const welcomeSub = document.querySelector(".intro h2");
@@ -33,7 +39,7 @@ const background4 = document.querySelector(".intro h2");
 
 
 background.addEventListener('mouseover', function(event){
-    background.style.backgroundColor = "blue";
+    background.style.backgroundColor = "darkseagreen";
 })
 
 background2.addEventListener('mouseover', function(event){
@@ -58,6 +64,22 @@ bottomSubs[1].addEventListener('click', function(event){
 });
 bottomSubs[2].addEventListener('click', function(event){
     bottomSubs[2].style.color = 'darkmagenta';
+});
+
+//buttons
+
+const button = document.querySelectorAll('.btn');
+
+button[0].addEventListener('click', function(event){
+    alert('You rock!');
+});
+
+button[1].addEventListener('click', function(event){
+    alert("You'll love the mountains!");
+});
+
+button[2].addEventListener('click', function(event){
+    alert("Island getaway? Yes please!");
 });
 
 
